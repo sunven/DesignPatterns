@@ -40,4 +40,23 @@
             return _uniqueInstance;
         }
     }
+
+    public sealed class Singleton1
+    {
+        public static readonly Singleton1 Instance=new Singleton1();
+
+        private Singleton1(){}
+    }
+
+    public sealed class Singleton2
+    {
+        public static readonly Singleton2 Instance;
+
+        static Singleton2()
+        {
+            Instance=new Singleton2();
+        }
+
+        private Singleton2(){}
+    }
 }

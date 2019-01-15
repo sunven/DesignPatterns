@@ -2,55 +2,113 @@
 
 namespace DesignPatterns
 {
-    public class AbstractFactory
+    /// <summary>
+    /// 抽象工厂类，提供open 和 close 的接口
+    /// </summary>
+    public abstract class AbstractFactory
     {
+        public abstract Open CreateOpen();
+        public abstract Close CreateClose();
+    }
 
-        public void Test()
+    /// <summary>
+    /// Ef
+    /// </summary>
+    public class EfFactory : AbstractFactory
+    {
+        // 打开ef连接
+        public override Open CreateOpen()
         {
-            IFactoryDatabase factory = new SqlServerFac();
-            IDepartMent sqlServer = factory.GetInstance();
-            sqlServer.Insert("helloworld!");
+            return new EfOpen();
+        }
+        
+        // 关闭dapper连接
+        public override Close CreateClose()
+        {
+            return new EfClose();
         }
     }
 
-    interface IDepartMent
+    /// <summary>
+    /// Dapper
+    /// </summary>
+    public class DapperFactory : AbstractFactory
     {
-        void Insert(string sql);//在数据库中插入一条记录
-    }
-    class SqlServer : IDepartMent
-    {
-        public void Insert(string sql)
+        // 打开dapper连接
+        public override Open CreateOpen()
         {
-            Console.WriteLine("sqlServer执行sql插入语句！");
+            return new DapperOpen();
+        }
+        // 关闭dapper连接
+        public override Close CreateClose()
+        {
+            return new DapperClose();
         }
     }
 
-    class Access : IDepartMent
+    /// <summary>
+    /// 打开连接
+    /// </summary>
+    public abstract class Open
     {
-        public void Insert(string sql)
+        /// <summary>
+        /// 打印方法，用于输出信息
+        /// </summary>
+        public abstract void Print();
+    }
+
+    /// <summary>
+    /// 关闭连接
+    /// </summary>
+    public abstract class Close
+    {
+        /// <summary>
+        /// 打印方法，用于输出信息
+        /// </summary>
+        public abstract void Print();
+    }
+
+    /// <summary>
+    /// ef open
+    /// </summary>
+    public class EfOpen : Open
+    {
+        public override void Print()
         {
-            Console.WriteLine("Access执行sql插入语句！");
+            Console.WriteLine("ef open");
         }
     }
 
-    interface IFactoryDatabase
+    /// <summary>
+    /// dapper open
+    /// </summary>
+    public class DapperOpen : Open
     {
-        IDepartMent GetInstance();
-    }
-
-    class SqlServerFac : IFactoryDatabase
-    {
-        public IDepartMent GetInstance()
+        public override void Print()
         {
-            return new SqlServer();
+            Console.WriteLine("dapper open");
         }
     }
 
-    class AccessFac : IFactoryDatabase
+    /// <summary>
+    /// ef close
+    /// </summary>
+    public class EfClose : Close
     {
-        public IDepartMent GetInstance()
+        public override void Print()
         {
-            return new Access();
+            Console.WriteLine("ef close");
+        }
+    }
+
+    /// <summary>
+    /// dapper close
+    /// </summary>
+    public class DapperClose : Close
+    {
+        public override void Print()
+        {
+            Console.WriteLine("depper close");
         }
     }
 }
