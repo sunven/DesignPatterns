@@ -50,10 +50,12 @@
     <Compile Include="Prototype.cs" />
     <Compile Include="Singleton.cs" />
     <Compile Include="Structure\Adapter.cs" />
+    <Compile Include="Structure\Bridge.cs" />
+    <Compile Include="Structure\Composite.cs" />
+    <Compile Include="Structure\Decorator.cs" />
   </ItemGroup>
   <ItemGroup>
     <None Include="App.config" />
-    <None Include="Readme.md" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

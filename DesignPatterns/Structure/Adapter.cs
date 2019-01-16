@@ -11,7 +11,7 @@ namespace DesignPatterns.Structure
     }
 
     /// <summary>
-    /// 两个孔的插头，源角色——需要适配的类
+    /// google 地图
     /// </summary>
     public abstract class GoogleMap
     {
@@ -56,8 +56,8 @@ namespace DesignPatterns.Structure
     }
 
     /// <summary>
-    /// 适配器类，这里适配器类没有TwoHole类，
-    /// 而是引用了TwoHole对象，所以是对象的适配器模式的实现
+    /// 适配器类
+    /// 适配器类提供了百度地图生成方法，但实际提供了google地图的生成方法
     /// </summary>
     public class BaiduAdapter1 : BaiduMap1
     {

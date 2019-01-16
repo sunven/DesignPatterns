@@ -69,9 +69,62 @@ namespace DesignPatterns
 
             //对象的适配器模式
             var baiduMap1 = new BaiduAdapter1();
-            baiduMap.Gen();
+            baiduMap1.Gen();
 
             #endregion
+
+            Console.WriteLine("------------------------------");
+
+            #region 桥接模式
+
+            DbControlAbstract dbControlAbstract = new DbControl();
+            // Sql Server
+            dbControlAbstract.Db = new SqlServerDb();
+            dbControlAbstract.Open();
+            dbControlAbstract.Add();
+            dbControlAbstract.Close();
+
+            // MySql
+            dbControlAbstract.Db = new MySqlDb();
+            dbControlAbstract.Open();
+            dbControlAbstract.Add();
+            dbControlAbstract.Close();
+
+            #endregion
+
+            Console.WriteLine("------------------------------");
+
+            #region 装饰者模式
+
+            // SqlServerDbHelper
+            DbHelper dbHelper = new SqlServerDbHelper();
+            // check
+            Decorator decorator = new CheckDecorator(dbHelper);
+            decorator.Add();
+
+            #endregion
+
+            Console.WriteLine("------------------------------");
+
+            //透明式
+            Car car = new Motorcycle();
+            car.Travel();
+            car.Two(new SuvCar());
+            car.Ten(new SuvCar());
+
+            car = new SuvCar();
+            car.Travel();
+            car.Two(new SuvCar());
+            car.Ten(new SuvCar());
+
+            //安全式
+            Car1 car1 = new Motorcycle1();
+            car1.Travel();
+
+            Car1 bus = new Bus();
+            bus.Travel();
+            ((FourCar)bus).Two(new Bus());
+            ((FourCar)bus).Ten(new Bus());
 
             Console.ReadKey();
         }
