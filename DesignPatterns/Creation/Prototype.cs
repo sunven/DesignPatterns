@@ -1,6 +1,6 @@
 ﻿using System;
 
-namespace DesignPatterns
+namespace DesignPatterns.Creation
 {
     public abstract class Prototype
     {

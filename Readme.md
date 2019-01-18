@@ -22,14 +22,36 @@
 
 [组合模式](https://llweb.top/dotnet/designpatterns/composite.html)
 
-[外观模式]()
+[外观模式](https://llweb.top/dotnet/designpatterns/facade.html)
 
-[享元模式]()
+[享元模式](https://llweb.top/dotnet/designpatterns/flyweight.html)
 
-[代理模式]()
+[代理模式](https://llweb.top/dotnet/designpatterns/proxy.html)
 
 
 ## 行为型
+
+[模板方法模式](https://llweb.top/dotnet/designpatterns/template.html)
+
+[命令模式](https://llweb.top/dotnet/designpatterns/command.html)
+
+[迭代器模式](https://llweb.top/dotnet/designpatterns/iterator.html)
+
+[观察者模式](https://llweb.top/dotnet/designpatterns/observer.html)
+
+[中介者模式](https://llweb.top/dotnet/designpatterns/mediator.html)
+
+[状态模式](https://llweb.top/dotnet/designpatterns/state.html)
+
+[策略模式](https://llweb.top/dotnet/designpatterns/stragety.html)
+
+[责任链模式](https://llweb.top/dotnet/designpatterns/responsibility.html)
+
+[访问者模式](https://llweb.top/dotnet/designpatterns/visitor.html)
+
+[备忘录模式](https://llweb.top/dotnet/designpatterns/memento.html)
+
+[解释器模式](https://llweb.top/dotnet/designpatterns/interpreter.html)
 
 ## reference
 

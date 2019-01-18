@@ -1,4 +1,4 @@
-﻿namespace DesignPatterns
+﻿namespace DesignPatterns.Creation
 {
     /// <summary>
     /// 单例模式的实现

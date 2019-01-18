@@ -1,7 +1,7 @@
 ﻿using System;
 using System.Collections.Generic;
 
-namespace DesignPatterns
+namespace DesignPatterns.Creation
 {
     /// <summary>
     /// 指挥者

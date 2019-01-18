@@ -42,17 +42,31 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="AbstractFactory.cs" />
-    <Compile Include="Builder.cs" />
-    <Compile Include="Factory.cs" />
+    <Compile Include="Behavior\Command.cs" />
+    <Compile Include="Behavior\Interpreter.cs" />
+    <Compile Include="Behavior\Iterator.cs" />
+    <Compile Include="Behavior\Mediator.cs" />
+    <Compile Include="Behavior\Memento.cs" />
+    <Compile Include="Behavior\Observer.cs" />
+    <Compile Include="Behavior\Responsibility.cs" />
+    <Compile Include="Behavior\State.cs" />
+    <Compile Include="Behavior\Stragety.cs" />
+    <Compile Include="Behavior\Template.cs" />
+    <Compile Include="Behavior\Vistor.cs" />
+    <Compile Include="Creation\AbstractFactory.cs" />
+    <Compile Include="Creation\Builder.cs" />
+    <Compile Include="Creation\Factory.cs" />
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
-    <Compile Include="Prototype.cs" />
-    <Compile Include="Singleton.cs" />
+    <Compile Include="Creation\Prototype.cs" />
+    <Compile Include="Creation\Singleton.cs" />
     <Compile Include="Structure\Adapter.cs" />
     <Compile Include="Structure\Bridge.cs" />
     <Compile Include="Structure\Composite.cs" />
     <Compile Include="Structure\Decorator.cs" />
+    <Compile Include="Structure\Facade.cs" />
+    <Compile Include="Structure\Flyweight.cs" />
+    <Compile Include="Structure\Proxy.cs" />
   </ItemGroup>
   <ItemGroup>
     <None Include="App.config" />

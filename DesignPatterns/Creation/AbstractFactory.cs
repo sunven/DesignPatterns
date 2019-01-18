@@ -1,6 +1,6 @@
 ﻿using System;
 
-namespace DesignPatterns
+namespace DesignPatterns.Creation
 {
     /// <summary>
     /// 抽象工厂类，提供open 和 close 的接口
